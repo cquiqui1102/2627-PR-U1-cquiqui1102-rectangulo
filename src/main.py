@@ -2,14 +2,14 @@
 
 def calcular_medidas(base: float, altura: float) -> tuple[float, float]:
 	"""
-	Calcula el área y el perímetro del rectángulo
+	Calcula el área y el perímetro del rectángulo.
 	
 	Args:
-	Base del rectángulo en cm
-	Altura del rectángulo en cm
+	base = Base del rectángulo en cm
+	altura = Altura del rectángulo en cm
 	
 	Returns:
-	Una tupla con el área y el perímetro del rectángulo calculado
+	tuple[float, float] = Área, Perímetro
 	"""
 
 	area: float = base * altura
@@ -21,14 +21,14 @@ def calcular_medidas(base: float, altura: float) -> tuple[float, float]:
 
 def determinar_forma(base: float, altura: float) -> str:
 	"""
-	Determina si es un cuadrado, horizontal o vertical
+	Determina si es un cuadrado, horizontal o vertical.
 	
 	Args:
-	Base del rectángulo en cm
-	Altura del rectángulo en cm
+	base = Base del rectángulo en cm
+	altura = Altura del rectángulo en cm
 	
 	Returns:
-	La forma del rectángulo
+	str = Forma del rectángulo
 	"""
 	
 	if base > altura:
@@ -49,26 +49,26 @@ def main():
 	Altura del rectángulo
 	
 	Returns:
-	La forma del rectángulo (horizontal o vertical)
-	El área del rectángulo en cm^2
-	El perímetro del rectángulo
+	Forma del rectángulo (horizontal o vertical)
+	Área del rectángulo en cm^2
+	Perímetro del rectángulo
 	"""
 	
 	# Entrada
 
-	base = float(input("Introduzca la distancia de la base del rectángulo (cm): "))
-	altura = float(input("Introduzca la distancia de la altura del rectángulo (cm): "))
+	base = float(input())
+	altura = float(input())
 	
 	# Salida
 
-	if base > 0 and altura > 0:
-		area, perimetro = calcular_medidas(base, altura)
-		
-		print(f"Forma: {determinar_forma(base, altura)}")
-		print(f"Área: {area} cm^2")
-		print(f"Perímetro: {perimetro} cm")
+	if base <= 0 or altura <= 0:
+		print("ERROR - No es posible un rectángulo.")
 	else:
-		print("No es posible un rectángulo.")
+		area, perimetro = calcular_medidas(base, altura)
+				
+		print(f"Forma: {determinar_forma(base, altura)}")
+		print(f"Área: {area:.2f} cm^2")
+		print(f"Perímetro: {perimetro:.2f} cm")
 		
 if __name__ == "__main__":
 	main()
