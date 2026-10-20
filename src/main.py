@@ -12,7 +12,6 @@ def calcular_medidas(base: float, altura: float) -> tuple[float, float]:
 	Una tupla con el área y el perímetro del rectángulo calculado
 	"""
 
-	
 	area: float = base * altura
 	perimetro: float = base * 2 + altura * 2
 	
@@ -56,15 +55,20 @@ def main():
 	"""
 	
 	# Entrada
+
 	base = float(input("Introduzca la distancia de la base del rectángulo (cm): "))
 	altura = float(input("Introduzca la distancia de la altura del rectángulo (cm): "))
 	
 	# Salida
-	area, perimetro = calcular_medidas(base, altura)
-	
-	print(f"Forma: {determinar_forma(base, altura)}")
-	print(f"Área: {area} cm^2")
-	print(f"Perímetro: {perimetro} cm")
-	
+
+	if base > 0 and altura > 0:
+		area, perimetro = calcular_medidas(base, altura)
+		
+		print(f"Forma: {determinar_forma(base, altura)}")
+		print(f"Área: {area} cm^2")
+		print(f"Perímetro: {perimetro} cm")
+	else:
+		print("No es posible un rectángulo.")
+		
 if __name__ == "__main__":
 	main()
