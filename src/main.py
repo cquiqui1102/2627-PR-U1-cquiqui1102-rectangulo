@@ -42,16 +42,9 @@ def determinar_forma(base: float, altura: float) -> str:
 
 def main():
 	"""
-	Función principal
+	Función principal:
+	Solicita al usuario la base y la altura de un rectángulo, y muestra la forma, área y perímetro.
 	
-	Args:
-	Base del rectángulo
-	Altura del rectángulo
-	
-	Returns:
-	Forma del rectángulo (horizontal o vertical)
-	Área del rectángulo en cm^2
-	Perímetro del rectángulo
 	"""
 	
 	# Entrada
