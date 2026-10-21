@@ -36,3 +36,17 @@ Puedes suponer que las entradas tienen un formato numérico válido.
 - Incluye la guarda de ejecución.
 
 Entrega un repositorio PÚBLICO con el nombre **2627-PR-U1-usarioPasen-rectangulo** y tu solución.
+
+---
+
+## Ejecutado
+
+El programa funciona perfectamente e indica la forma del rectángulo.
+
+![Vertical](imagen/resultado1.png)
+
+![Horizontal](imagen/resultado2.png)
+
+![Cuadrado](imagen/resultado3.png)
+
+![ERROR](imagen/resultado4.png)
